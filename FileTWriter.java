@@ -44,11 +44,11 @@ public class FileTWriter implements Runnable {
     }
 
     public static void main(String[] args) {
-        Runnable t1 = new FileTWriter("D:\\test\\test1.txt");
+        Runnable t1 = new FileTWriter("D:\\PTTHHT\\BtTh\\Tuan03\\test\\test1.txt");
         Thread th1 = new Thread(t1);
         th1.start();
 
-        Runnable t2 = new FileTWriter("D:\\test\\test2.txt");
+        Runnable t2 = new FileTWriter("D:\\PTTHHT\\BtTh\\Tuan03\\test\\test2.txt");
         Thread th2 = new Thread(t2);
         th2.start();
     }
