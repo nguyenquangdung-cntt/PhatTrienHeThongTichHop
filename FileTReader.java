@@ -3,6 +3,7 @@ package Tuan03;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.lang.Thread;
 
 public class FileTReader implements Runnable {
     String filename;
@@ -30,16 +31,19 @@ public class FileTReader implements Runnable {
                 System.out.println(this.getFilename() + ": " + a);
             }
             br.close();
+            fr.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        FileReader tr1 = new FileReader("D:\\test\\tes1.txt");
-        FileReader tr2 = new FileReader("D:\\test\\tes2.txt");
+    public static void main(String[] args) {
+        Runnable t1 = new FileTReader("D:\\PTTHHT\\BtTh\\Tuan03\\test\\test1.txt");
+        Thread th1 = new Thread(t1);
+        th1.start();
 
-        tr1.start();
-        tr2.start();
+        Runnable t2 = new FileTReader("D:\\PTTHHT\\BtTh\\Tuan03\\test\\test2.txt");
+        Thread th2 = new Thread(t2);
+        th2.start();
     }
 }
