@@ -25,10 +25,10 @@ public class Bai01server {
                     int i = Integer.parseInt(inline);
                     switch (i) {
                         case 0:
-                            inline = "Không";
+                            inline = "Khong";
                             break;
                         case 1:
-                            inline = "Một";
+                            inline = "Mot";
                             break;
                         case 2:
                             inline = "Hai";
@@ -37,28 +37,28 @@ public class Bai01server {
                             inline = "Ba";
                             break;
                         case 4:
-                            inline = "Bốn";
+                            inline = "Bon";
                             break;
                         case 5:
-                            inline = "Năm";
+                            inline = "Nam";
                             break;
                         case 6:
-                            inline = "Sáu";
+                            inline = "Sau";
                             break;
                         case 7:
-                            inline = "Bảy";
+                            inline = "Bay";
                             break;
                         case 8:
-                            inline = "Tám";
+                            inline = "Tam";
                             break;
                         case 9:
-                            inline = "Chín";
+                            inline = "Chin";
                             break;
 
                     }
                     dos.writeUTF(inline);
                 } else {
-                    dos.writeUTF("Không phải số nguyên");
+                    dos.writeUTF("Khong phai so nguyen");
                 }
             }
         } catch (Exception e) {
